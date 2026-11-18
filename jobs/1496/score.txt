@@ -1,0 +1,65 @@
+================================================================================
+JOB 1496-NE  -  2333 LUANA DRIVE EAST, JACKSONVILLE FL 32246
+LOT 123, DEER RIDGE UNIT 3 (PB 47, PGS 21/21A/21B)   RE# 162843-4510
+Scored against: River City Surveying sealed sheet, fieldwork 04/10/2026
+================================================================================
+
+1. BOUNDARY  -  built from the COGO points in 1496-NE.txt, no human input
+--------------------------------------------------------------------------------
+LINE    SEALED (P)             (P)DIST  MINE (COGO)               DIST   dDIST
+N line  N 89°21' 50" E          184.00  N 89°15' 59" E          184.00    0.00
+E line  S 00°38' 10" E           65.00  S 00°44' 00" E           65.00    0.00
+S line  S 89°21' 50" W          189.45  S 89°16' 00" W          189.45   -0.00
+L1      S 00°38' 10" E           16.91  N 00°43' 55" W           16.91   -0.00
+
+C-1 arc   sealed R=215.00 L=48.50(P)/48.54(M) Δ=12°55'27"(P)/12°56'03"(M)
+          mine   R=215.00 L=48.50            Δ=12°55'30"  chord=48.40
+
+Max distance error on any boundary line: 0.00 ft
+Basis-of-bearings rotation vs plat: uniform +0°05'50" (already in your QA notes)
+
+2. MONUMENTS  -  found vs COGO, fully automatic
+--------------------------------------------------------------------------------
+  pt 1 FIP 1/2 NO-ID    vs 505:  dN=+0.109 dE=+0.008  |d|=0.109'
+  pt 2 FIP 1/2 NO-ID    vs 504:  dN=+0.030 dE=+0.044  |d|=0.053'
+  pt 3 FIP 1/2 LB1704   vs 503:  dN=+0.000 dE=+0.000  |d|=0.000'
+  pt 4 FIP 1/2 LB1704   vs 502:  dN=+0.015 dE=-0.248  |d|=0.248'
+  pt 5 XCUT             vs 501:  dN=+0.162 dE=-0.502  |d|=0.527'  <-- FLAG >0.50'
+  pt 7 FIP 1/2 NO-ID    vs 507:  dN=-0.338 dE=-0.062  |d|=0.344'
+  pt 8 FIP 1/2 LB3848   vs 506:  dN=-0.665 dE=-0.033  |d|=0.666'  <-- FLAG >0.50'
+
+3. COVERAGE  -  what the point file alone can and cannot produce
+--------------------------------------------------------------------------------
+ITEM                              STATUS    NOTE
+Boundary lines + curve            AUTO      COGO pts 501-507 reproduce the sealed values exactly
+Monument recovery + deltas        AUTO      7 monuments, matches your own QA report
+Area / acreage                    AUTO      12,047 sf w/ arc vs 12,023 sealed  (0.2%)
+Road, curb, curb drain, WM        AUTO      6 BOC, 2 CDI, 1 WM, 1 TRB
+Lake: top of bank, edge of water  AUTO      3 TOB + 2 EOW shots
+Concrete / paver areas            PARTIAL   12 CC + 14 CB + 11 EC - chained by shot order, needs review
+House outline                     NO        only 6 BC shots, all on the W and N faces; E and S faces are taped
+Sheds (metal + wood)              PARTIAL   2 corners each - 84/85 and 92/95, not closed
+Fence runs                        NO        9 F-coded shots for 3 runs (6'VF, 6'WF, 4'CLF) around the whole lot
+~25 tape dimensions on sheet      NO        field book only
+11 encroachment 'ON' callouts     BLOCKED   computable, but only once the fence/shed linework exists
+Sheet, title block, legend, notes AUTO      template fill - proven on 1389
+
+  AUTO 6/12   PARTIAL 2   NO/BLOCKED 4
+
+4. FIELD CODES SEEN HERE vs THE 1389 KEY
+--------------------------------------------------------------------------------
+  confirmed: F<ctl>-<height>-<material>, ctl 0=line 1=end 2=corner 3=gate
+  NEW material letter:  C = chain link  (1389 only had W=wood, P=PVC)
+    pt 58  F3        gate      -'  -
+    pt 59  F2-6-P    corner    6'  PVC/vinyl
+    pt 61  F1-6-P    end       6'  PVC/vinyl
+    pt 83  F1-6-W    end       6'  wood
+    pt 86  F2-4-C    corner    4'  chain link
+    pt 88  F2-4-C    corner    4'  chain link
+    pt 91  F2-4-C    corner    4'  chain link
+    pt 93  F0        line      -'  -
+    pt 94  F0        line      -'  -
+  UNRESOLVED codes:  BOC0 / BOC2 (back of curb + control digit?),
+                     CB vs CC (paver corner vs concrete corner?), CB-EC, CC-CB, TRB
+
+wrote /home/artwalk/Downloads/git/scratch-drawing/jobs/1496/1496.dxf  (442 entities)
