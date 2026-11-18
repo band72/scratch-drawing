@@ -1,2 +1,6 @@
 # Local training corpus (client survey/title material) - not for publication
 training/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
